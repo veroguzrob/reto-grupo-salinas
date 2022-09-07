@@ -1,0 +1,35 @@
+.ctn-txt-result {
+  margin: 60px 30px 0;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(8, auto);
+  border-bottom: 3px solid #f6d43b;
+
+}
+
+.txt-result {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.ctn-result {
+  background-color: #f8f8ff;
+  margin: 0px 30px 60px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(8, auto);
+  grid-template-rows: repet(10, auto);
+}
+
+.line-result {
+  padding: 0;
+  font-size: 18px;
+}
+
+.edit {
+  width: 0;
+  height: 0;
+  color: #909090;
+  text-decoration: underline;
+  font-size: 18px;
+}

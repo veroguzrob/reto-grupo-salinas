@@ -1,6 +1,6 @@
 import '../Styles/Body.css'
 import { CgAsterisk } from 'react-icons/cg';
-
+import { saveForm } from '../Utils/firestore';
 
 const Body = () => {
   return (
@@ -22,23 +22,23 @@ const Body = () => {
           <div className='lines'>
             <i className='asterisk' ><CgAsterisk /></i>
             <p className='form-text'> Nombre (s):</p><br />
-            <input type="text" />
+            <input type="text" id='firstName' />
           </div>
           <div className='lines'>
             <i className='asterisk' ><CgAsterisk /></i>
             <p className='form-text'> Apellido paterno:</p><br />
-            <input type="text" />
+            <input type="text" id='lastNamePat' />
           </div>
           <div className='lines'>
             <i className='asterisk' ><CgAsterisk /></i>
             <p className='form-text'> Apellido materno:</p><br />
-            <input type="text" />
+            <input type="text" id='lastNameMat' />
           </div>
 
           <div className='lines'>
             <i className='asterisk' ><CgAsterisk /></i>
             <p className='form-text'> Edad:</p><br />
-            <input type="text" />
+            <input type="text" id='age' />
           </div>
           <div className='lines'>
             <i className='asterisk' ><CgAsterisk /></i>
@@ -46,53 +46,44 @@ const Body = () => {
             <div className='ctn-radio'>
               <div>
                 <input type="radio" name="Femenino" id="radio" />
-                <p className='radio-text'>Femenino</p>
+                <p className='radio-text' id='fem'>Femenino</p>
               </div>
               <div>
                 <input type="radio" name="Femenino" id="radio" />
-                <p className='radio-text'>Masculino</p>
+                <p className='radio-text' id='mal'>Masculino</p>
               </div>
             </div>
           </div>
           <div className='lines'>
             <i className='asterisk' ><CgAsterisk /></i>
             <p className='form-text'> Correo electrónico:</p><br />
-            <input type="text" />
+            <input type="text" id='email' />
           </div>
 
           <div className='lines'>
             <i className='asterisk' ><CgAsterisk /></i>
             <p className='form-text'> Teléfono:</p><br />
-            <input type="text" />
+            <input type="text" id='phone' />
           </div>
         </form>
 
         <div className='ctn-buttons'>
           <button className='btn-cancel'>Cancelar</button>
-          <button className='btn-save'>Guardar</button>
+          <button className='btn-save' onClick={() => {
+            const firstName = document.getElementById('firstName').value;
+            const lastNamePat = document.getElementById('lastNamePat').value;
+            const lastNameMat = document.getElementById('lastNameMat').value;
+            const age = document.getElementById('age').value;
+            //const sexFem = document.getElementById('fem').value;
+            //const sexMal = document.getElementById('mal').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+
+            saveForm(firstName, lastNamePat, lastNameMat, age, email, phone);
+
+          }}>Guardar</button>
         </div>
 
-      </section>
-
-      <section className='ctn-txt-result'>
-        <p className='txt-result'>Nombre (s)</p>
-        <p className='txt-result'>Apellido paterno</p>
-        <p className='txt-result'>Apellido materno</p>
-        <p className='txt-result'>Edad</p>
-        <p className='txt-result'>Sexo</p>
-        <p className='txt-result'>Correo electrónico</p>
-        <p className='txt-result'>Teléfono</p>
-        <p className='txt-result'>Acciones</p>
-      </section>
-      <section className='ctn-result'>
-        <p className='line-result'>Nombre</p>
-        <p className='line-result'>A paterno</p>
-        <p className='line-result'>A materno</p>
-        <p className='line-result'>Edad</p>
-        <p className='line-result'>Sexo</p>
-        <p className='line-result'>Correo electrónico</p>
-        <p className='line-result'>Teléfono</p>
-        <p className='line-result'>Acciones</p>
       </section>
     </>
   )
