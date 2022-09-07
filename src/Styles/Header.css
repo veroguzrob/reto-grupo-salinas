@@ -1,0 +1,58 @@
+ .container-header {
+   display: grid;
+   grid-template-columns: .5fr 3fr .7fr .4fr .4fr;
+   grid-template-rows: auto;
+   border-bottom: 1px solid #f6d43b;
+ }
+
+ .menu {
+   width: 30px;
+   height: 30px;
+   margin-left: 20px;
+   align-self: center;
+ }
+
+ .logo {
+   width: 75px;
+   height: 75px;
+   align-self: center;
+   justify-self: center;
+
+ }
+
+ .div-rol {
+   padding: 10px 0;
+ }
+
+ .name {
+   font-weight: bold;
+   font-size: 15px;
+ }
+
+ .rol {
+   font-size: 15px;
+ }
+
+ .div-user {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .user {
+   width: 60px;
+   height: 60px;
+   padding: 0;
+ }
+
+ .arrow {
+   width: 10px;
+   height: 10px;
+   align-self: flex-end;
+   margin-bottom: 7px;
+ }
+
+ .date {
+   font-size: 15px;
+   align-self: center;
+ }
