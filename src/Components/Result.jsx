@@ -26,6 +26,7 @@ const Result = () => {
   return (
     <>
       <section className='ctn-txt-result'>
+        <p className='txt-result'>Nombre (s):</p>
         <p className='txt-result'>Apellido paterno</p>
         <p className='txt-result'>Apellido materno</p>
         <p className='txt-result'>Edad</p>
@@ -37,21 +38,18 @@ const Result = () => {
 
       <section className='ctn-result'>
         {listForm && listForm.map((listForm) =>
-          <div className="container-note" key={listForm.id} >
-            <p className="title"> {listForm.title} </p>
-            <p className="text"> {listForm.note} </p>
+          <div className="container-list-result" key={listForm.id} >
             <p className='line-result'>{listForm.firstName}</p>
             <p className='line-result'>{listForm.lastNamePat}</p>
             <p className='line-result'>{listForm.lastNameMat}</p>
             <p className='line-result'>{listForm.age}</p>
             <p className='line-result'>sexo</p>
-            <p className='line-result'>{listForm.email} electrónico</p>
+            <p className='line-result'>{listForm.email}</p>
             <p className='line-result'>{listForm.phone}</p>
-            <button className="edit"  >Editar</button>
+            <p className='edit'>Editar</p>
           </div>)
         }
       </section >
-
     </>
   )
 }

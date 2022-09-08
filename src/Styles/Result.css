@@ -2,34 +2,49 @@
   margin: 60px 30px 0;
   padding: 10px;
   display: grid;
-  grid-template-columns: repeat(8, auto);
+  grid-template-columns: 160px 160px 160px 80px 160px 320px 160px 80px;
+  justify-content: space-between;
   border-bottom: 3px solid #f6d43b;
+
 
 }
 
 .txt-result {
   font-size: 18px;
   font-weight: bold;
+  display: inline;
+  text-align: center;
+  align-self: center;
 }
 
 .ctn-result {
   background-color: #f8f8ff;
   margin: 0px 30px 60px;
+}
+
+.container-list-result {
   padding: 10px;
   display: grid;
-  grid-template-columns: repeat(8, auto);
-  grid-template-rows: repet(10, auto);
+  grid-template-columns: 160px 160px 160px 80px 160px 320px 160px 80px;
+
 }
 
 .line-result {
-  padding: 0;
   font-size: 18px;
+  display: inline;
+  text-align: center;
+  align-self: center;
+
 }
 
 .edit {
-  width: 0;
-  height: 0;
+  font-size: 18px;
+  display: inline;
+  text-align: center;
+  align-self: center;
   color: #909090;
   text-decoration: underline;
   font-size: 18px;
+  align-self: center;
+  cursor: pointer;
 }
