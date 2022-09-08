@@ -18,7 +18,7 @@ const Body = () => {
           <p className='recomendation'> son obligatorios</p>
         </div>
 
-        <form className='form'>
+        <form className='form' id='form'>
           <div className='lines'>
             <i className='asterisk' ><CgAsterisk /></i>
             <p className='form-text'> Nombre (s):</p><br />
@@ -70,6 +70,9 @@ const Body = () => {
         <div className='ctn-buttons'>
           <button className='btn-cancel'>Cancelar</button>
           <button className='btn-save' onClick={() => {
+
+            const formList = document.getElementById('form');
+
             const firstName = document.getElementById('firstName').value;
             const lastNamePat = document.getElementById('lastNamePat').value;
             const lastNameMat = document.getElementById('lastNameMat').value;
@@ -80,6 +83,10 @@ const Body = () => {
             const phone = document.getElementById('phone').value;
 
             saveForm(firstName, lastNamePat, lastNameMat, age, email, phone);
+
+
+            formList.reset()
+
 
           }}>Guardar</button>
         </div>
