@@ -1,6 +1,7 @@
 import '../Styles/Result.css'
 import { useState, useEffect } from "react";
 import { onGetForm } from '../Utils/firestore';
+import { useNavigate } from "react-router-dom";
 
 
 const Result = () => {
@@ -8,20 +9,16 @@ const Result = () => {
   useEffect(() => {
     onGetForm((querySnapShot) => {
       const listForm = [];
-
       querySnapShot.forEach((doc) => {
         const allDataForm = doc.data();
         listForm.push({ ...allDataForm, id: doc.id, });
       });
       setlistForm(listForm)
-
-
     });
-
   }, [])
-
   const [listForm, setlistForm] = useState(null)
 
+  const navigate = useNavigate();
 
   return (
     <>
@@ -46,7 +43,11 @@ const Result = () => {
             <p className='line-result'>{listForm.gender}</p>
             <p className='line-result'>{listForm.email}</p>
             <p className='line-result'>{listForm.phone}</p>
-            <p className='edit'>Editar</p>
+            <p className='edit' onClick={() => {
+
+              navigate(`/edit/${listForm.id}`);
+
+            }} >Editar</p>
           </div>)
         }
       </section >
