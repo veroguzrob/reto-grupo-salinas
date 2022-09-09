@@ -1,4 +1,4 @@
-# Prueba Técnica Grupo Salinas
+# Prueba Técnica de Grupo Salinas
 
 Web de uso interno para dar de alta usuarios.
 
