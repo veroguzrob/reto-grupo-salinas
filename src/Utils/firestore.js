@@ -1,5 +1,5 @@
 import { db } from './config'
-import { addDoc, collection, onSnapshot, doc, getDoc, updateDoc, deleteDoc } from "firebase/firestore";
+import { addDoc, collection, onSnapshot, doc, getDoc, updateDoc } from "firebase/firestore";
 
 
 export const saveForm = (firstName, lastNamePat, lastNameMat, age, gender, email, phone) => addDoc(collection(db, 'form'), { firstName, lastNamePat, lastNameMat, age, gender, email, phone });
@@ -24,4 +24,3 @@ export const updateOnePerson = async (idForm, objStateForm) => {
   return await updateDoc(noteRef, objStateForm);
 }
 
-export const deleteOnePerson = (idForm) => deleteDoc(doc(db, "notes", idForm));
