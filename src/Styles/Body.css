@@ -55,19 +55,15 @@ input {
 
 .ctn-radio {
   width: 300px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 30px 130px 30px 110px;
+  font-size: 20px;
 }
 
-#radio {
-  width: 35px;
-  height: 35px;
-}
-
-.radio-text {
-  display: inline;
-  font-size: 18px;
+.radio {
+  width: 25px;
+  height: 25px;
 }
 
 .ctn-buttons {
