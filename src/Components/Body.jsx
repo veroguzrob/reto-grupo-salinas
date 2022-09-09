@@ -10,15 +10,12 @@ const Body = () => {
         <p className="title1">inicio / Formulario Reactivo</p>
         <p className="title2">Formulario Reactivo</p>
       </section>
-
       <section className='container-form'>
-
         <div className='recomendation'>
           <p className='recomendation'>Favor de completar los siguentes campos. Los campos con </p>
           <i className='asterisk' ><CgAsterisk /></i>
           <p className='recomendation'> son obligatorios</p>
         </div>
-
         <form className='form' id='form'>
           <div className='lines'>
             <i className='asterisk' ><CgAsterisk /></i>
@@ -36,7 +33,6 @@ const Body = () => {
             <label className='form-text'> Apellido materno:</label><br />
             <input type="text" id='lastNameMat' />
           </div>
-
           <div className='lines'>
             <i className='asterisk' ><CgAsterisk /></i>
             <label className='form-text'> Edad:</label><br />
@@ -55,20 +51,17 @@ const Body = () => {
             <label className='form-text'> Correo electrónico:</label><br />
             <input type="text" id='email' />
           </div>
-
           <div className='lines'>
             <i className='asterisk' ><CgAsterisk /></i>
             <label className='form-text'> Teléfono:</label><br />
             <input type="text" id='phone' />
           </div>
         </form>
-
         <div className='ctn-buttons'>
           <button className='btn-cancel' onClick={() => {
             const formList = document.getElementById('form');
             formList.reset()
           }}>Cancelar</button>
-
           <button className='btn-save' onClick={() => {
             const firstName = document.getElementById('firstName').value;
             const lastNamePat = document.getElementById('lastNamePat').value;
@@ -84,13 +77,10 @@ const Body = () => {
             const email = document.getElementById('email').value;
             const phone = document.getElementById('phone').value;
             saveForm(firstName, lastNamePat, lastNameMat, age, genderSelect, email, phone);
-
             const formList = document.getElementById('form');
             formList.reset()
-
           }}>Guardar</button>
         </div>
-
       </section>
     </>
   )

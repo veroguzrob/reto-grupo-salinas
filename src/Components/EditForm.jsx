@@ -10,7 +10,6 @@ const EditForm = () => {
   const params = useParams();
   const [dataForm, setDataForm] = useState(null)
 
-
   const handleChangeName = (e) => {
     setDataForm((formGet) => {
       return { ...formGet, firstName: e.target.value }
@@ -70,7 +69,6 @@ const EditForm = () => {
             <i className='asterisk' ><CgAsterisk /></i>
             <p className='recomendation'> son obligatorios</p>
           </div>
-
           <form className='form' id='form'>
             <div className='lines'>
               <i className='asterisk' ><CgAsterisk /></i>
@@ -88,7 +86,6 @@ const EditForm = () => {
               <label className='form-text'> Apellido materno:</label><br />
               <input type="text" id='lastNameMat' value={dataForm.lastNameMat} onChange={handleChangeLnM} />
             </div>
-
             <div className='lines'>
               <i className='asterisk' ><CgAsterisk /></i>
               <label className='form-text'> Edad:</label><br />
@@ -107,26 +104,22 @@ const EditForm = () => {
               <label className='form-text'> Correo electrónico:</label><br />
               <input type="text" id='email' value={dataForm.email} onChange={handleChangeEmail} />
             </div>
-
             <div className='lines'>
               <i className='asterisk' ><CgAsterisk /></i>
               <label className='form-text'> Teléfono:</label><br />
               <input type="text" id='phone' value={dataForm.phone} onChange={handleChangePhone} />
             </div>
           </form>
-
           <div className='ctn-buttons'>
             <button className='btn-cancel' onClick={() => {
               navigate('/')
             }}>Cancelar</button>
-
             <button className='btn-save' onClick={() => {
               updateOnePerson(params.idEdit, dataForm).then(() => {
                 navigate('/')
               })
             }}>Guardar</button>
           </div>
-
         </section>
       </>
       }

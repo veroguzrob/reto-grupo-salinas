@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { onGetForm } from '../Utils/firestore';
 import { useNavigate } from "react-router-dom";
 
-
 const Result = () => {
 
   useEffect(() => {
@@ -32,7 +31,6 @@ const Result = () => {
         <p className='txt-result'>Teléfono</p>
         <p className='txt-result'>Acciones</p>
       </section>
-
       <section className='ctn-result'>
         {listForm && listForm.map((listForm) =>
           <div className="container-list-result" key={listForm.id} >
@@ -44,9 +42,7 @@ const Result = () => {
             <p className='line-result'>{listForm.email}</p>
             <p className='line-result'>{listForm.phone}</p>
             <p className='edit' onClick={() => {
-
               navigate(`/edit/${listForm.id}`);
-
             }} >Editar</p>
           </div>)
         }
