@@ -43,7 +43,7 @@ const Result = () => {
             <p className='line-result'>{listForm.lastNamePat}</p>
             <p className='line-result'>{listForm.lastNameMat}</p>
             <p className='line-result'>{listForm.age}</p>
-            <p className='line-result'>sexo</p>
+            <p className='line-result'>{listForm.gender}</p>
             <p className='line-result'>{listForm.email}</p>
             <p className='line-result'>{listForm.phone}</p>
             <p className='edit'>Editar</p>

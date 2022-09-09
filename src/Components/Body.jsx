@@ -44,14 +44,8 @@ const Body = () => {
             <i className='asterisk' ><CgAsterisk /></i>
             <p className='form-text'> Sexo:</p><br />
             <div className='ctn-radio'>
-              <div>
-                <input type="radio" name="Femenino" id="radio" />
-                <p className='radio-text' id='fem'>Femenino</p>
-              </div>
-              <div>
-                <input type="radio" name="Femenino" id="radio" />
-                <p className='radio-text' id='mal'>Masculino</p>
-              </div>
+              <input type="radio" name="gender" className="radio" id='fem' value='Femenino' />Femenino
+              <input type="radio" name="gender" className="radio" id='mal' value='Masculino' />Masculino
             </div>
           </div>
           <div className='lines'>
@@ -77,12 +71,19 @@ const Body = () => {
             const lastNamePat = document.getElementById('lastNamePat').value;
             const lastNameMat = document.getElementById('lastNameMat').value;
             const age = document.getElementById('age').value;
-            //const sexFem = document.getElementById('fem').value;
-            //const sexMal = document.getElementById('mal').value;
+
+            const gender = document.getElementsByName('gender');
+            let genderSelect = '';
+            for (let i = 0; i < gender.length; i++) {
+              if (gender[i].checked) {
+                genderSelect = gender[i].value;
+              }
+            }
+
             const email = document.getElementById('email').value;
             const phone = document.getElementById('phone').value;
 
-            saveForm(firstName, lastNamePat, lastNameMat, age, email, phone);
+            saveForm(firstName, lastNamePat, lastNameMat, age, genderSelect, email, phone);
 
 
             formList.reset()
