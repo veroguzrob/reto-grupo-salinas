@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect, useState } from "react";
 import { CgAsterisk } from 'react-icons/cg';
-import { deleteOnePerson, getForm, updateOnePerson } from '../Utils/firestore';
+import { getForm, updateOnePerson } from '../Utils/firestore';
 import Header from './Header';
 import Result from './Result';
 
